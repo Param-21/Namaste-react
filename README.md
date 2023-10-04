@@ -17,4 +17,36 @@
 -Error Handling
 -HTTPs
 -Tree Shaking-->It means to remove the  unused code
+# Namaste Food
+/**
+ * Header
+ * -Logo
+ * Nav Items
+ * -
+ * Body
+ *  -Search
+ *      -Restaurent Card
+ *           -image
+ *             -RES-name
+ *                -Star-rating
+ *                   -Cuisines
+ *                      -ETA
+ * Footer
+ *    -Copyright
+ *    -Links
+ *    -Address
+ *     -Contact  
+ * 
+ */
+
+There are two types of export/import 
+
+-Default Export/import 
+
+export default component_name;
+import component from ".//path//export_component"
+
+export const component
+#  React Hooks
+-usestate()---> superpowerful state variables in React
 
