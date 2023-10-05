@@ -44,3 +44,9 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+    background-color: grey;
+}
