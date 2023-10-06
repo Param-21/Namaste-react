@@ -6,7 +6,8 @@ const Body  = () => {
 //Local variable-----> super powerful variable 
     const[listOfRestaurents,setListofRestaurents] = useState(resList); ///this is basically array de-structuring
     
-    /*
+    const[serachText,setSearchText] = useState("");
+    
     useEffect(() => {
         fetchData();
 
@@ -18,16 +19,32 @@ const fetchData = async () => {
         );
         const json = await data.json();
         //Optional Chaining 
-
-        setListofRestaurents(json?.data.cards[2].data?.data?.cards);
-};*/
+        setListOfRestraunt(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    };
 
     if (listOfRestaurents.length === 0) {
         return <shimmer/>   
-    }
+    };
+
     return(
         <div className="Body">
             <div className="filter">
+                <div className="Search">
+                    <input 
+                    type="text"
+                     className="search-box" 
+                     value={serachText}
+                     onChange={(e) => {
+                        serachText(e.target.value); 
+                     }}
+                     />
+                    <button onClick={() => {
+                        //Filtering the restaurent cards and update the UI on search button
+                        //We will require a search text here
+                        console.log(serachText);
+                    }}>Search</button>
+                </div>
                 <button className="filter-btn" 
                  onClick={() =>{
                    const filteredList = listOfRestaurents.filter(

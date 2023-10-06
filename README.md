@@ -50,3 +50,4 @@ export const component
 #  React Hooks
 -usestate()---> superpowerful state variables in React
 
+Whenever state variable updates, react triggers a reconceliation cycle or it re-renders a component
